@@ -6,6 +6,8 @@ function Capitalize(str) {
 
  	if(isNaN(first))
  		 return first.toUpperCase() + str.slice(1);
+ 	else 
+ 	  return str;
 }
 
 // Split the movie array, call Capitalize, and join
