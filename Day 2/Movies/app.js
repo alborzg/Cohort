@@ -5,7 +5,7 @@ function Capitalize(str) {
  	var first = str[0];
 
  	if(isNaN(first))
- 		    return first.toUpperCase() + str.slice(1);
+         return first.toUpperCase() + str.slice(1);
  	else 
  	     return str;
 }
