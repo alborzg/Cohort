@@ -1,3 +1,5 @@
+//noprotect
+
 // Bank constructor
 function Bank() {
     this.balance = 100;
@@ -19,16 +21,25 @@ var newBank = new Bank();
 // Prompt for credit amounts
 for(var i = 0; i<3; i++) {
 
-    var num = parseInt(prompt("Please enter a number."), 10);
+    var num = parseInt(prompt("Please enter a number to be credited."), 10);
+
+    while(isNaN(num)) {
+        var num = parseInt(prompt("That is not a number, please enter a number credited."), 10);
+    }
+
     newBank.credit(num);
 }
 
 // Prompt for debit amounts
 for(var i = 0; i<2; i++) {
 
-    var num = parseInt(prompt("Please enter a number."), 10);
-    newBank.debit(num);
+    var num = parseInt(prompt("Please enter a number debited."), 10);
 
+    while (isNaN(num)) {
+        var num = parseInt(prompt("That is not a number, please enter a number debited."), 10);
+    }
+
+    newBank.debit(num);
 }
 
-console.log(newBank.balance);
+console.log("Balance: " + newBank.balance);
