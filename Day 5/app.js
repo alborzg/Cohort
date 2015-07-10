@@ -27,12 +27,20 @@ function builder(elementType, text, attributes, styles, selector) {
 
     return newElement;
 }
-builder('ul', 'This is a list', {id: 'movies' }, null, 'body');
+
+builder('h2', 'This is a list', {}, null, 'body');
+builder('ul', null, {id: 'movies' }, null, 'body');
+
+
 
 for(var i =0; i<movies.length; i++) {
     movie = movies[i];
 
-    builder('li', movie[0], null, null, '#movies');
+    var info = movie[0] + ', run time: ' + movie [1] + ', released: ' + movie[2];
+
+    builder('li', info, null, null, '#movies');
 
 }
+
+
 
