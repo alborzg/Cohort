@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+<div class = "container">
+<div class = "jumbotron">
+    <div class = "row">
+        <div class = "col-8-md">
+<h1>Movie Form</h1>
+
+
+<form name="newMovieForm" id="newMovieForm">
+    <input type="text" name="movieTitle" placeholder="Enter Title" id="movieTitle" />
+    <input type="text"  name="runTime" placeholder="Enter Runtime " id="runTime" />
+    <input type="text" name="yearRelease" placeholder="Enter Release Date" id="yearRelease" />
+    <div id="genre">
+        <input type="radio" name="genre" value="comedy" /> comedy<br/>
+        <input type="radio" name="genre" value="drama" /> drama<br/>
+        <input type="radio" name="genre" value="action" /> action<br/>
+        <input type="radio" name="genre" value="horror" /> horror<br/>
+        <input type="radio" name="genre" value="foreign" /> foreign<br/>
+    </div>
+    <div class = "container">
+        <textarea type="text" name="description" placeholder="Enter A Description" id="description" class="form-control"/></textarea>
+        <input type="submit" value="Add Movie" class="btn-primary"/>
+    </div>
+
+</form>
+
+<hr>
+
+
+
+<script type="text/javascript" src="app.js"></script>
+            </div>
+</div>
+</div>
+</div>
+</body>
+</html>
