@@ -28,7 +28,8 @@ function builder(elementType, text, attributes, styles, selector) {
     return newElement;
 }
 
-builder('h2', 'This is a list', {}, null, 'body');
+builder('h2', 'This is a list', {id: 'dates'}, null, 'body');
+builder('h2', 'Here\'s another list', {}, null, 'body');
 builder('ul', null, {id: 'movies' }, null, 'body');
 
 
@@ -42,5 +43,12 @@ for(var i =0; i<movies.length; i++) {
 
 }
 
+for(var i =0; i<movies.length; i++) {
+    movie = movies[i];
 
+    var info = movie[2];
 
+    builder('a', null, {href:'', class: 'bydate'}, null, '#dates');
+    builder('li', info, null, null, '.bydate');
+
+}

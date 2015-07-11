@@ -76,7 +76,7 @@ form.addEventListener("submit", function (evt) {
         }
     }
     var movieInstance = new Movie(movie, time, year, desc, genre);
-    submission = builder('li', movieInstance.movieTitle, {rel: movieInstance.preview(), class: movieInstance.runningTimeHours()}, null, null);
+    submission = builder('li', movieInstance.movieTitle, {rel: movieInstance.preview(), class: movieInstance.runningTimeHours()}, {listStyleType: 'none'}, null);
 
     submission.addEventListener('click', function(){
         alert(this.getAttribute('rel') + " Run Time: " + this.getAttribute('class') + " hrs");
@@ -85,6 +85,7 @@ form.addEventListener("submit", function (evt) {
     var sticky = document.getElementById('list');
     sticky.appendChild(submission);
 
+    document.getElementById("newMovieForm").reset();
 
     //console.log(movieInstance);
     //console.log(movieInstance.movieTitle);
@@ -94,3 +95,4 @@ form.addEventListener("submit", function (evt) {
     evt.preventDefault();
 
 });
+
